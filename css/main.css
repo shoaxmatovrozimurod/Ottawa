@@ -570,7 +570,6 @@ body {
     opacity: 0.9;
 }
 
-/* 4 ta ustunli Grid dizayni */
 .quality__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -623,7 +622,6 @@ body {
     color: #666666;
 }
 
-/* --- RESPONSIV (Planshet va telefonlar uchun) --- */
 @media (max-width: 1024px) {
     .quality__list {
         grid-template-columns: repeat(2, 1fr); /* Planshetda 2 ta ustun */
@@ -636,5 +634,164 @@ body {
     }
     .quality__roofing__title {
         font-size: 30px;
+    }
+}
+/* --------------reason----------- */
+.reason {
+    padding: 21px 0;
+    background-color: #ffffff;
+}
+
+.reason__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Chap tarafdagi rasm bloki */
+.reason__video-box {
+    width: 75%;
+    height: 600px;
+    background-image: url('../images/video2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.reason__content-card {
+    width: 530px;
+    background-color: #ffffff;
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    margin-left: -90px; /* Rasm ustiga sal chiqib turishi uchun */
+    z-index: 2;
+}
+
+.reason__subtitle-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #006633;
+    margin-bottom: 10px;
+}
+
+.reason__subtitle {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.reason__hr {
+    width: 50px;
+    height: 2px;
+    border: none;
+    background-color: #006633;
+}
+
+.reason__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #030303;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+
+.reason__desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #555555;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+
+.reason__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.reason__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.reason__check {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.reason__nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reason__dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #006633;
+    width: 24px;
+    border-radius: 5px;
+}
+
+.reason__nav {
+    display: flex;
+    gap: 8px;
+}
+
+.reason__arrow {
+    width: 35px;
+    height: 35px;
+    background-color: #eaf3ef;
+    border: none;
+    border-radius: 50%;
+    color: #113f36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reason__arrow:hover {
+    background-color: #113f36;
+    color: #ffffff;
+}
+
+/* --- RESPONSIV --- */
+@media (max-width: 992px) {
+    .reason__container {
+        flex-direction: column;
+    }
+    .reason__video-box {
+        width: 100%;
+        height: 350px;
+    }
+    .reason__content-card {
+        width: 90%;
+        margin-left: 0;
+        margin-top: -40px;
     }
 }
