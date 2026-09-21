@@ -194,125 +194,202 @@ body {
     }
 }
 /* ------------------hero-------------- */
-   .hero {
+  .hero {
     margin-top: 150px;
     background-image: url('../images/home.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 660px;
+    display: flex;
+    align-items: center; /* Vertikal ravishda o'rtaga qo'yadi */
 }
-.hero__container{
-    width: 727px;
+
+.hero__container {
+    max-width: 727px;
+    width: 100%;
+    margin: 0 auto; /* Avtomatik o'rtaga suradi */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 213px;
 }
-.hero__text{
-    padding-top: 93px;
-    align-items: center;
-    font-family:" Fira Sans";
+
+.hero__text {
+    padding-top: 0; /* Margin o'rniga flex gap ishlatgani ma'qul */
+    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 26px;
     line-height: 120%;
-    letter-spacing: 0%;
-    text-align: center;
     text-transform: uppercase;
     color: #ffffff;
 }
-.hero__title{
+
+.hero__title {
     margin-top: 32px;
-    font-family: "Fira Sans";
+    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 66px;
     line-height: 120%;
-    letter-spacing: 0%;
     text-align: center;
     color: #ffffff;
 }
-.hero__btn{
+
+.hero__btn {
     padding: 12px 23px;
     margin-top: 32px;
     border: none;
     color: #ffffff;
     border-radius: 8px;
-    font-family: "Fira Sans";
+    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 26px;
     line-height: 120%;
-    letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
-    position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.3s ease;
-     background: linear-gradient(#ffffff 0 0) no-repeat calc(200% - var(--p, 0%))
+    background: linear-gradient(#ffffff 0 0) no-repeat calc(200% - var(--p, 0%)) 
     100% / 200% var(--p, 0.2em);
-    transition: 0.8s var(--t, 0s),
-    background-position 0.3s calc(0.3s - var(--t, 0s));
+    transition: 0.8s var(--t, 0s), background-position 0.3s calc(0.3s - var(--t, 0s)), color 0.3s ease;
 }
-.hero__btn:hover{
-    background-color: #e5fbef;
+
+.hero__btn:hover {
     color: #030303;
-      --p: 100%;
-  --t: 0.3s;
+    --p: 100%;
+    --t: 0.3s;
+}
+
+/* --- RESPONSIV QISM (Planshet va telefonlar uchun) --- */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 46px; /* Planshetlar uchun sarlavha hajmi kichiklashadi */
+    }
+    .hero__text, .hero__btn {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        margin-top: 100px;
+        height: 500px;
+    }
+    .hero__title {
+        font-size: 32px; /* Telefonlar uchun moslashadi */
+        margin-top: 20px;
+    }
+    .hero__text {
+        font-size: 16px;
+    }
+    .hero__btn {
+        font-size: 18px;
+        padding: 10px 18px;
+        margin-top: 20px;
+    }
 }
 /* ---------------------products------------ */
-.products__list{
+.products {
+    padding: 60px 0;
+}
+
+.products__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 33px;
+    flex-wrap: wrap; /* Ekran sig'masa pastga tushishi uchun */
 }
-.products__item{
-    width: 555px;
-    height: 222px;
+
+.products__item {
+    width: 100%;
+    max-width: 555px;
+    height: auto; /* Balandlikni matn sig'ishiga qarab o'zgaradigan qilamiz */
+    min-height: 222px;
     display: flex;
     align-items: center;
-    gap: 43px;
+    gap: 20px;
     background-color: #f2f2f2;
     border-radius: 12px;
     justify-content: space-between;
     box-shadow: 10px 10px 10px rgb(245, 245, 241);
+    padding: 20px; /* Matnlar chetga yopishib qolmasligi uchun */
 }
-.products__item__inner__sn{
-    margin-left: 22px;
-    font-family: "Fira Sans";
+
+/* Ichki matn qismi */
+.products__item__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.products__item__inner__sn {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 14px;
     line-height: 120%;
-    letter-spacing: 0%;
     color: #006633;
 }
-.products__item__inner__title{
+
+.products__item__inner__title {
     margin-top: 7px;
-    margin-left: 22px;
-    font-family: "Fira Sans";
+    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 120%;
-    letter-spacing: 0%;
     color: #030303;
 }
-.products__item__inner__text{
-    margin-top: 8px;
-    margin-left: 22px;
-    font-family: "Fira Sans";
-    font-weight: 300;
-    font-style: Light;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    color: #000000;
 
+.products__item__inner__text {
+    margin-top: 8px;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+    color: #000000;
 }
-.products__item__inner__img{
-    width: 200px;
-    height: 200px;
+
+.products__item__inner__img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* --- RESPONSIV QISM (Planshet va telefonlar uchun) --- */
+@media (max-width: 992px) {
+    .products__list {
+        justify-content: center; /* Planshetda kartochkalarni o'rtaga keltiradi */
+    }
+    .products__item {
+        max-width: 100%; /* Kenglikni to'liq oladi */
+    }
+}
+
+@media (max-width: 600px) {
+    .products__item {
+        flex-direction: column-reverse; /* Telefonda rasm tepada, matn pastda bo'lishi uchun */
+        text-align: center;
+        padding: 25px 15px;
+    }
+    
+    .products__item__inner {
+        align-items: center;
+    }
+
+    .products__item__inner__title {
+        font-size: 20px;
+    }
+
+    .products__item__inner__text {
+        font-size: 14px;
+    }
+
+    .products__item__inner__img {
+        width: 100%;
+        max-width: 220px;
+        height: 140px;
+    }
 }
 /* -------------services-------------- */
 .services {
@@ -441,7 +518,123 @@ body {
     border-radius: 6px;
 }
 /* ------------------quality------------ */
-.quality{
-    background-image: url(../images/home2.png);
+.quality {
+    background-image: url('../images/home2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    position: relative;
+}
 
+/* Matnlar qismini markazlashtirish */
+.quality__what {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.quality__what__text {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.quality__what__hr {
+    width: 60px;
+    height: 2px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.quality__roofing {
+    text-align: center;
+    max-width: 800px;
+    margin: 15px auto 40px auto;
+    color: #ffffff;
+}
+
+.quality__roofing__title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 120%;
+}
+
+.quality__roofing__text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 160%;
+    opacity: 0.9;
+}
+
+/* 4 ta ustunli Grid dizayni */
+.quality__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.quality__item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.quality__item:hover {
+    transform: translateY(-5px);
+}
+
+.quality__numcir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.quality__numcir__number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #dcdcdc;
+}
+
+.quality__numcir__circle {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.quality__item__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #113f36;
+    margin-bottom: 10px;
+}
+
+.quality__item__text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 150%;
+    color: #666666;
+}
+
+/* --- RESPONSIV (Planshet va telefonlar uchun) --- */
+@media (max-width: 1024px) {
+    .quality__list {
+        grid-template-columns: repeat(2, 1fr); /* Planshetda 2 ta ustun */
+    }
+}
+
+@media (max-width: 600px) {
+    .quality__list {
+        grid-template-columns: 1fr; /* Telefonda 1 ta ustun */
+    }
+    .quality__roofing__title {
+        font-size: 30px;
+    }
 }
