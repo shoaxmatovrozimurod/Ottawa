@@ -425,7 +425,6 @@ body {
     font-weight: 700;
 }
 
-/* O'ng tarafdagi rasmlar joylashuvi (Figmadagidek) */
 .services__images-wrapper {
     display: flex;
     flex-direction: column;
@@ -440,4 +439,9 @@ body {
     height: 240px;
     object-fit: cover;
     border-radius: 6px;
+}
+/* ------------------quality------------ */
+.quality{
+    background-image: url(../images/home2.png);
+
 }
