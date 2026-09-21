@@ -202,7 +202,14 @@ body {
     background-repeat: no-repeat;
     height: 660px;
 }
+.hero__container{
+    width: 727px;
+    align-items: center;
+    text-align: center;
+    margin-left: 213px;
+}
 .hero__text{
+    padding-top: 93px;
     align-items: center;
     font-family:" Fira Sans";
     font-weight: 600;
@@ -214,6 +221,7 @@ body {
     color: #ffffff;
 }
 .hero__title{
+    margin-top: 32px;
     font-family: "Fira Sans";
     font-weight: 600;
     font-style: SemiBold;
@@ -225,7 +233,7 @@ body {
 }
 .hero__btn{
     padding: 12px 23px;
-    background-color: #006633;
+    margin-top: 32px;
     border: none;
     color: #ffffff;
     border-radius: 8px;
@@ -240,14 +248,69 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease;
-     background: linear-gradient(#006633 0 0) no-repeat calc(200% - var(--p, 0%))
+     background: linear-gradient(#ffffff 0 0) no-repeat calc(200% - var(--p, 0%))
     100% / 200% var(--p, 0.2em);
-    transition: 0.3s var(--t, 0s),
+    transition: 0.8s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
 .hero__btn:hover{
-    background-color: #ffffff;
-    color: #ffffff;
+    background-color: #e5fbef;
+    color: #030303;
       --p: 100%;
   --t: 0.3s;
+}
+/* ---------------------products------------ */
+.products__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 33px;
+}
+.products__item{
+    width: 555px;
+    height: 222px;
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(245, 245, 241);
+}
+.products__item__inner__sn{
+    margin-left: 22px;
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #006633;
+}
+.products__item__inner__title{
+    margin-top: 7px;
+    margin-left: 22px;
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #030303;
+}
+.products__item__inner__text{
+    margin-top: 8px;
+    margin-left: 22px;
+    font-family: "Fira Sans";
+    font-weight: 300;
+    font-style: Light;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #000000;
+
+}
+.products__item__inner__img{
+    width: 200px;
+    height: 200px;
 }
