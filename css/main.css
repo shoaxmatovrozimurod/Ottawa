@@ -1521,6 +1521,117 @@ body {
         height: 200px;
     }
 }
+/* ---------------call */
+.call-banner {
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.call-banner__wrapper {
+    background-color: #113f36; /* Figma'dagi to'q yashil fon */
+    border-radius: 12px;
+    padding: 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.call-banner__info {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+}
+
+.call-banner__subtitle-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #a8d5ba;
+    margin-bottom: 15px;
+}
+
+.call-banner__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.call-banner__hr {
+    width: 50px;
+    height: 2px;
+    border: none;
+    background-color: #a8d5ba;
+}
+
+.call-banner__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.call-banner__phones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.call-banner__phone-item {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.call-banner__separator {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.call-banner__image-box {
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.call-banner__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .call-banner__wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    .call-banner__info {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .call-banner__subtitle-box {
+        justify-content: center;
+    }
+    .call-banner__phones {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .call-banner__title {
+        font-size: 30px;
+    }
+    .call-banner__phone-item, 
+    .call-banner__separator {
+        font-size: 18px;
+    }
+}
 
 
 
