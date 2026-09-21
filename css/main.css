@@ -290,7 +290,7 @@ body {
 }
 /* ---------------------products------------ */
 .products {
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 .products__list {
@@ -393,7 +393,7 @@ body {
 }
 /* -------------services-------------- */
 .services {
-    padding: 80px 0;
+    padding: 20px 0;
     background-color: #ffffff;
 }
 
@@ -523,7 +523,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 80px 0;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -780,7 +780,6 @@ body {
     color: #ffffff;
 }
 
-/* --- RESPONSIV --- */
 @media (max-width: 992px) {
     .reason__container {
         flex-direction: column;
@@ -793,5 +792,363 @@ body {
         width: 90%;
         margin-left: 0;
         margin-top: -40px;
+    }
+}
+/* --------------contact---- */
+.contact-banner {
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.contact-banner__wrapper {
+    background-color: #006633; /* Figma'dagi asosiy to'q yashil fon */
+    border-radius: 12px;
+    padding: 60px 60px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-banner__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-banner__info {
+    max-width: 550px;
+}
+
+.contact-banner__subtitle-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #a8d5ba;
+    margin-bottom: 15px;
+}
+
+.contact-banner__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.contact-banner__hr {
+    width: 50px;
+    height: 2px;
+    border: none;
+    background-color: #a8d5ba;
+}
+
+.contact-banner__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 120%;
+    margin-bottom: 15px;
+}
+
+.contact-banner__desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #e0e0e0;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
+
+.contact-banner__form {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-banner__input {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    padding: 14px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-banner__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-banner__btn {
+    background-color: #ffffff;
+    color: #113f36;
+    border: none;
+    padding: 14px 25px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.contact-banner__btn:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-banner__image-box {
+    max-width: 480px;
+    width: 100%;
+}
+
+.contact-banner__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.stats__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: -40px; 
+    position: relative;
+    z-index: 3;
+    padding-bottom: 60px;
+}
+
+.stats__item {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.stats__item.active {
+    border-color: #0088cc; 
+}
+
+.stats__icon-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.stats__icon {
+    max-height: 35px;
+    object-fit: contain;
+}
+
+.stats__number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #113f36;
+    margin-bottom: 5px;
+}
+
+.stats__number span {
+    color: #0088cc; /* Plyus belgisi rangi */
+}
+
+.stats__text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666666;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+    .contact-banner__top {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-banner__info {
+        max-width: 100%;
+    }
+    .contact-banner__subtitle-box {
+        justify-content: center;
+    }
+    .stats__list {
+        grid-template-columns: repeat(2, 1fr); /* Planshetda 2 tadan chiqadi */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-banner__wrapper {
+        padding: 30px 20px 0 20px;
+    }
+    .contact-banner__title {
+        font-size: 30px;
+    }
+    .contact-banner__form {
+        flex-direction: column;
+    }
+    .stats__list {
+        grid-template-columns: 1fr; /* Telefonda 1 tadan pastma-past tushadi */
+        margin-top: 30px;
+    }
+}
+/* --------------explore------------- */
+.explore {
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.explore__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.explore__info {
+    max-width: 380px;
+    flex-shrink: 0;
+}
+
+.explore__subtitle-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #006633;
+    margin-bottom: 12px;
+}
+
+.explore__subtitle {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.explore__hr {
+    width: 50px;
+    height: 2px;
+    border: none;
+    background-color: #006633;
+}
+
+.explore__title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #030303;
+    line-height: 120%;
+    margin-bottom: 15px;
+}
+
+.explore__desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
+
+/* Strelka tugmalari */
+.explore__nav {
+    display: flex;
+    gap: 10px;
+}
+
+.explore__arrow {
+    width: 45px;
+    height: 45px;
+    background-color: #eaf3ef;
+    border: none;
+    border-radius: 50%;
+    color: #113f36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore__arrow:hover {
+    background-color: #113f36;
+    color: #ffffff;
+}
+
+.explore__cards-wrapper {
+    overflow-x: auto; /* Ekranga sig'maganda gorizontal scroll chiqishi uchun */
+    width: 100%;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.explore__cards-list {
+    display: flex;
+    gap: 24px;
+}
+
+.explore__card {
+    min-width: 320px;
+    max-width: 364px;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.explore__card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.explore__card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px 25px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #ffffff;
+}
+
+.explore__card-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #a8d5ba;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.explore__card-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    .explore__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .explore__info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .explore__card {
+        min-width: 280px;
+        height: 380px;
+    }
+    .explore__title {
+        font-size: 30px;
     }
 }
