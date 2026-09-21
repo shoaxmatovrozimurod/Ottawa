@@ -1,0 +1,197 @@
+/* Asosiy tozalash */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    position: relative;
+}
+
+/* Konteyner - elementlarni ekran o'rtasida bir xil kenglikda ushlab turadi */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Visually hidden */
+.visually__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Header asosi */
+.header {
+    background-color: #113f36; /* Figma'dagi to'q yashil rang */
+    padding: 15px 0 0 0;
+    position: relative;
+}
+
+/* Yuqori qism (Logotip va o'ngdagi elementlar) */
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.header__logo {
+    max-height: 45px;
+    object-fit: contain;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Telefon raqami */
+.header__phone {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.header__phone:hover {
+    opacity: 0.8;
+}
+
+/* Free Estimate tugmasi */
+.header__item__btn {
+    background-color: #ffffff;
+    color: #113f36;
+    border: none;
+    padding: 11px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header__item__btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navbar (Pastki menyu qismi) */
+.navbar {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Oqish ingichka chiziq */
+    padding: 15px 0;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__list__link {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease;
+}
+
+.navbar__list__link:hover {
+    color: #a8d5ba;
+}
+
+/* Mobil qo'shimchalar desktopda yashirin bo'ladi */
+.navbar__mobile-extras {
+    display: none;
+}
+
+/* Burger menyu (Desktopda yashirin) */
+.bars {
+    width: 30px;
+    height: 23px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Burger bosilganda "X" (krestik) bo'lish animatsiyasi */
+.bars.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.bars.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.bars.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Mobil versiya va Burger menyu ishlashi */
+@media (max-width: 900px) {
+    .bars {
+        display: flex; /* Telefonda burger chiqadi */
+    }
+
+    .header__right {
+        display: none; /* Yuqori qismdagi tel va tugma yashirinadi */
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #113f36;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 100;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Burger ochilganda mobil qo'shimchalar (tel va tugma) pastda chiqadi */
+    .navbar__mobile-extras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
