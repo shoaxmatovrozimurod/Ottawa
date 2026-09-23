@@ -38,7 +38,7 @@ body {
     right: 0;
     left: 0;
     z-index: 111;
-    box-shadow: 2px 9px 3px rgb(245, 245, 247);
+    box-shadow: 2px 2px 3px rgb(2, 61, 35);
 
 }
 
@@ -215,7 +215,7 @@ body {
 }
 /* ------------------hero-------------- */
   .hero {
-    margin-top: 150px;
+    margin-top: 130px;
     background-image: url('../images/home.png'); 
     background-size: cover;
     background-position: center;
