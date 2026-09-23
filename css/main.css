@@ -117,22 +117,22 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.8px;
     transition: color 0.3s ease;
-    position: relative; /* Chiziqcha to'g'ri joylashishi uchun muhim */
+    position: relative; 
 }
 
 .navbar__list__link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px; /* Chiziq qalinligi */
-    bottom: -4px; /* Matndan qancha pastda turishi */
+    height: 2px;
+    bottom: -4px;
     left: 0;
-    background-color: #006633; /* Chiziq rangi (oq) */
-    transition: width 0.3s ease-in-out; /* Silliq kengayish tezligi */
+    background-color: #006633; 
+    transition: width 0.3s ease-in-out; 
 }
 
 .navbar__list__link:hover::after {
-    width: 100%; /* Sichqoncha kelganda chiziq to'liq chiqadi */
+    width: 100%;
 }
 
 .navbar__list__link:hover {
@@ -295,7 +295,7 @@ body {
         height: 500px;
     }
     .hero__title {
-        font-size: 32px; /* Telefonlar uchun moslashadi */
+        font-size: 32px; 
         margin-top: 20px;
     }
     .hero__text {
@@ -317,13 +317,13 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 33px;
-    flex-wrap: wrap; /* Ekran sig'masa pastga tushishi uchun */
+    flex-wrap: wrap; 
 }
 
 .products__item {
     width: 100%;
     max-width: 555px;
-    height: auto; /* Balandlikni matn sig'ishiga qarab o'zgaradigan qilamiz */
+    height: auto; 
     min-height: 222px;
     display: flex;
     align-items: center;
@@ -332,10 +332,9 @@ body {
     border-radius: 12px;
     justify-content: space-between;
     box-shadow: 10px 10px 10px rgb(245, 245, 241);
-    padding: 20px; /* Matnlar chetga yopishib qolmasligi uchun */
+    padding: 20px;
 }
 
-/* Ichki matn qismi */
 .products__item__inner {
     display: flex;
     flex-direction: column;
@@ -375,19 +374,18 @@ body {
     flex-shrink: 0;
 }
 
-/* --- RESPONSIV QISM (Planshet va telefonlar uchun) --- */
 @media (max-width: 992px) {
     .products__list {
-        justify-content: center; /* Planshetda kartochkalarni o'rtaga keltiradi */
+        justify-content: center; 
     }
     .products__item {
-        max-width: 100%; /* Kenglikni to'liq oladi */
+        max-width: 100%; 
     }
 }
 
 @media (max-width: 600px) {
     .products__item {
-        flex-direction: column-reverse; /* Telefonda rasm tepada, matn pastda bo'lishi uchun */
+        flex-direction: column-reverse; 
         text-align: center;
         padding: 25px 15px;
     }
@@ -423,7 +421,6 @@ body {
     gap: 60px;
 }
 
-/* Chap tomon (Matnlar) */
 .services__box {
     max-width: 550px;
 }
@@ -464,7 +461,6 @@ body {
     margin-top: 15px;
 }
 
-/* Galichkali ro'yxatni 2 ustun qilish */
 .services__box__list {
     display: flex;
     gap: 30px;
@@ -496,7 +492,6 @@ body {
     color: #333333;
 }
 
-/* Sertifikat qismi */
 .services__box__certificat {
     display: flex;
     align-items: center;
@@ -546,7 +541,6 @@ body {
     position: relative;
 }
 
-/* Matnlar qismini markazlashtirish */
 .quality__what {
     display: flex;
     align-items: center;
@@ -643,13 +637,13 @@ body {
 
 @media (max-width: 1024px) {
     .quality__list {
-        grid-template-columns: repeat(2, 1fr); /* Planshetda 2 ta ustun */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .quality__list {
-        grid-template-columns: 1fr; /* Telefonda 1 ta ustun */
+        grid-template-columns: 1fr; 
     }
     .quality__roofing__title {
         font-size: 30px;
@@ -668,7 +662,6 @@ body {
     margin: 0 auto;
 }
 
-/* Chap tarafdagi rasm bloki */
 .reason__video-box {
     width: 75%;
     height: 600px;
@@ -685,7 +678,7 @@ body {
     padding: 80px;
     border-radius: 12px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    margin-left: -90px; /* Rasm ustiga sal chiqib turishi uchun */
+    margin-left: -90px; 
     z-index: 2;
 }
 
@@ -820,7 +813,7 @@ body {
 }
 
 .contact-banner__wrapper {
-    background-color: #006633; /* Figma'dagi asosiy to'q yashil fon */
+    background-color: #006633;
     border-radius: 12px;
     padding: 60px 60px 0 60px;
     position: relative;
@@ -969,7 +962,7 @@ body {
 }
 
 .stats__number span {
-    color: #0088cc; /* Plyus belgisi rangi */
+    color: #0088cc;
 }
 
 .stats__text {
@@ -991,7 +984,7 @@ body {
         justify-content: center;
     }
     .stats__list {
-        grid-template-columns: repeat(2, 1fr); /* Planshetda 2 tadan chiqadi */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
@@ -1006,7 +999,7 @@ body {
         flex-direction: column;
     }
     .stats__list {
-        grid-template-columns: 1fr; /* Telefonda 1 tadan pastma-past tushadi */
+        grid-template-columns: 1fr; 
         margin-top: 30px;
     }
 }
@@ -1065,7 +1058,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Strelka tugmalari */
 .explore__nav {
     display: flex;
     gap: 10px;
@@ -1093,7 +1085,7 @@ body {
 }
 
 .explore__cards-wrapper {
-    overflow-x: auto; /* Ekranga sig'maganda gorizontal scroll chiqishi uchun */
+    overflow-x: auto; 
     width: 100%;
     padding-bottom: 10px;
     scrollbar-width: thin;
@@ -1178,11 +1170,11 @@ body {
 }
 
 .team__wrapper {
-    background-color: #113f36; /* Figma'dagi to'q yashil fon */
+    background-color: #113f36;
     border-radius: 12px;
     padding: 0 60px 0 60px;
     position: relative;
-    overflow: hidden; /* Yashil fondan hech narsa tashqariga chiqib ketmaydi */
+    overflow: hidden; 
 }
 
 .team__top {
@@ -1225,7 +1217,6 @@ body {
     line-height: 120%;
 }
 
-/* Uy rasmi yashil fonning ichida joylashadi */
 .team__roof-image {
     max-width: 420px;
     width: 100%;
@@ -1237,12 +1228,11 @@ body {
     object-fit: contain;
 }
 
-/* --- JAMOAGA A'ZOLAR KARTOCKALARI --- */
 .team__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 40px; /* Yashil quti ichida, matnlar tagida joylashadi */
+    margin-top: 40px; 
     position: relative;
     z-index: 5;
 }
@@ -1301,7 +1291,6 @@ body {
     background-color: #006633;
 }
 
-/* --- RESPONSIV QISM --- */
 @media (max-width: 1024px) {
     .team__top {
         flex-direction: column;
@@ -1376,7 +1365,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Kartochkalar konteyneri */
 .team-inspection__cards {
     display: flex;
     flex-direction: column;
@@ -1384,7 +1372,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Jamoa kartochkasi dizayni */
 .team-inspection__card {
     background-color: #ffffff;
     border: 1px solid #eaeaea;
@@ -1433,7 +1420,6 @@ body {
     object-fit: cover;
 }
 
-/* Strelka tugmalari */
 .team-inspection__nav {
     display: flex;
     gap: 10px;
@@ -1460,7 +1446,6 @@ body {
     color: #ffffff;
 }
 
-/* O'ng tarafdagi Booking Form bloki (Fon rasmi bilan) */
 .team-inspection__form-box {
     width: 420px;
     flex-shrink: 0;
@@ -1517,7 +1502,6 @@ body {
     background-color: #004d26;
 }
 
-/* --- RESPONSIV QISM --- */
 @media (max-width: 1024px) {
     .team-inspection__wrapper {
         flex-direction: column;
@@ -1546,7 +1530,7 @@ body {
 }
 
 .call-banner__wrapper {
-    background-color: #113f36; /* Figma'dagi to'q yashil fon */
+    background-color: #113f36;
     border-radius: 12px;
     padding: 0 50px;
     display: flex;
@@ -1753,13 +1737,13 @@ body {
 
 @media (max-width: 1024px) {
     .news__list {
-        grid-template-columns: repeat(2, 1fr); /* Planşetlərdə 2 sütun */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .news__list {
-        grid-template-columns: 1fr; /* Mobil cihazlarda 1 sütun */
+        grid-template-columns: 1fr; 
     }
     .news__title {
         font-size: 30px;
@@ -1868,7 +1852,7 @@ body {
     height: 100%;
     flex: 1;
     border: none;
-    filter: saturate(0.8); /* Figma dizaynidagi xarita rangiga moslash uchun */
+    filter: saturate(0.8); 
 }
 
 .service-area__card {
@@ -1944,7 +1928,7 @@ body {
 }
 /* -------------footer---------- */
 .footer {
-    background-color: #1a1a1a; /* To'q qora/kulrang fon */
+    background-color: #1a1a1a; 
     color: #ffffff;
     padding-top: 80px;
     position: relative;
@@ -2005,13 +1989,13 @@ body {
 }
 
 .footer__contact-card {
-    background-color: #113f36; /* To'q yashil fon */
+    background-color: #113f36; 
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     position: absolute;
     right: 0;
-    top: -40px; /* Yuqoriga chiqib turishi uchun */
+    top: -40px; 
     width: 320px;
     z-index: 10;
 }
@@ -2066,7 +2050,7 @@ body {
     align-items: center;
     padding: 40px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-right: 350px; /* Yashil karta bilan ustma-ust tushib qolmasligi uchun */
+    margin-right: 350px;
 }
 
 .footer__newsletter-title {
